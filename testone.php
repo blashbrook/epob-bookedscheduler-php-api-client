@@ -4,7 +4,7 @@
 $user = 'Admin';
 $pass = 'password';
 // set to your root folder where phpScheduleIt is installed
-$server_url = "http://localhost:8888/calendar";
+$server_url = "http://localhost:8888/epob-bookedscheduler";
 // ========================= TEST PARAMETERS END ========================= */
 
 // create login/auth info
@@ -38,16 +38,17 @@ curl_close($ch);
 echo $reply . "<br>";
 
 // Convert JSON to an array
-$auth= json_decode($reply);
+//$auth= json_decode($reply);
 
 //  Display the array
+/*
 echo "<br>sessionToken = " . $auth['sessionToken'];
 echo "<br>sessionExpires = " . $auth['sessionExpires'];
 echo "<br>userId = " . $auth['userId'];
 echo "<br>isAuthenicated = " . $auth['isAuthenticated'];
 echo "<br>links = " . $auth['links']['href'];
 echo "<br>message = " . $auth['links']['message'];
-
+*/
 
 //  Session token to make additional requests
 //curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-phpScheduleIt-SessionToken" => $header_data['sessionToken'], "X-phpScheduleIt-UserId" => . $auth['userId']);
