@@ -10,7 +10,7 @@ require_once(‘bookedapi.php’);
  startsession();
  $username = ‘Admin’;
  $password = ‘password';
- $bookedApiUrl = ‘http://localhost:8888/bookedscheduler-php-api-client/web/services/index.php';
+ $bookedApiUrl = ‘http://localhost:8888/epob-bookedscheduler';
  $bookedapiclient = new bookedapiclient($username, $password, $bookedApiUrl);
  $bookedapiclient-> authenticate(true);
 
