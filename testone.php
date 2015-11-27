@@ -4,7 +4,7 @@
 $user = 'Admin';
 $pass = 'password';
 // set to your root folder where phpScheduleIt is installed
-$server_url = "http://localhost:8888/epob-bookedscheduler";
+$server_url = "http://localhost:8888/booked";
 // ========================= TEST PARAMETERS END ========================= */
 
 // create login/auth info
@@ -16,7 +16,7 @@ $body = array_map(utf8_encode, $body );
 
 // create the post data for the auth
 $body =  json_encode($body );
-
+echo $body;
 // set the url for accessing the call you want
 $url = $server_url . "/Web/Services/Authentication/Authenticate";
 
